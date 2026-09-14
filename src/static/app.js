@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // DOM elements
   const activitiesList = document.getElementById("activities-list");
   const messageDiv = document.getElementById("message");
+  const announcementBanner = document.querySelector(".announcement-banner");
   const registrationModal = document.getElementById("registration-modal");
   const modalActivityName = document.getElementById("modal-activity-name");
   const signupForm = document.getElementById("signup-form");
@@ -24,6 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("login-form");
   const closeLoginModal = document.querySelector(".close-login-modal");
   const loginMessage = document.getElementById("login-message");
+
+  if (announcementBanner) {
+    announcementBanner.setAttribute("role", "status");
+    announcementBanner.setAttribute("aria-live", "polite");
+  }
 
   // Activity categories with corresponding colors
   const activityTypes = {
